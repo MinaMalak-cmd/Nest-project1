@@ -9,7 +9,7 @@ export class AuthService {
   }
 
   findAll() {
-    return `This action returns all auth`;
+    return `This action returns all auth ${process.env.DB_URL}`;
   }
 
   findOne(id: number) {

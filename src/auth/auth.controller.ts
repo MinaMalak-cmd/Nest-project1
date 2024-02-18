@@ -14,6 +14,7 @@ export class AuthController {
 
   @Get()
   findAll() {
+    console.log("🚀 ~ AuthController ~ findAll ~ this.authService:", this.authService)
     return this.authService.findAll();
   }
 
