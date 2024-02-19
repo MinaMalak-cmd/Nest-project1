@@ -13,7 +13,6 @@ export class ProductService {
   async create(createProductDto: CreateProductDto): Promise<Product> {
     try {
       const newStudent = await this.productModel.create(createProductDto);
-      console.log("🚀 ~ ProductService ~ create ~ newStudent:", newStudent)
       return newStudent.save();
       
     } catch (error) {
