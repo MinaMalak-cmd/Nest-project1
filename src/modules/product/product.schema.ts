@@ -8,15 +8,7 @@ export class Product {
   @Prop()
   title: string;
   @Prop()
-  slug: string;
-  @Prop()
-  description: string;
-  @Prop()
   price: number;
-  @Prop()
-  appliedDiscount: number;
-  @Prop()
-  priceAfterDiscount: number;
   @Prop()
   stock: number;
   @Prop()
@@ -26,17 +18,7 @@ export class Product {
   @Prop()
   createdBy: string;
   @Prop()
-  updatedBy: string;
-  @Prop()
-  deletedBy: string;
-  @Prop()
-  subCategoryId: string;
-  @Prop()
   categoryId: string;
-  @Prop()
-  brandId: string;
-  @Prop()
-  colors: [string];
   @Prop()
   sizes: [string];
 }
