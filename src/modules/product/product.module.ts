@@ -9,13 +9,3 @@ import { Product, ProductSchema } from './product.schema';
   providers: [ProductService],
 })
 export class ProductModule {}
-
-// import { MongooseModule } from '@nestjs/mongoose';
-// import { Cat, CatSchema } from './schemas/cat.schema';
-
-// @Module({
-//   imports: [MongooseModule.forFeature([{ name: Cat.name, schema: CatSchema }])],
-//   controllers: [CatsController],
-//   providers: [CatsService],
-// })
-// export class CatsModule {}
