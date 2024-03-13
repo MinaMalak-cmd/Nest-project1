@@ -5,17 +5,29 @@ export type ProductDocument = HydratedDocument<Product>;
 
 @Schema()
 export class Product {
-  @Prop()
+  @Prop({
+    type:String, 
+    required:true,
+    minlength:2,
+    maxlength:100
+  })
   title: string;
-  @Prop()
+  @Prop({
+    required:true,
+    type:Number
+  })
   price: number;
-  @Prop()
+  @Prop({
+    type:Number
+  })
   stock: number;
   @Prop()
-  Images: string;
+  Images: [string];
   @Prop()
   customPath: string;
-  @Prop()
+  @Prop({
+
+  })
   createdBy: string;
   @Prop()
   categoryId: string;

@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, Res } from '@nestjs/
 import { ProductService } from './product.service';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
-import { Product } from './product.schema';
+import { Product } from '../../schemas/product.schema';
 import { Response } from 'express';
 
 @Controller('product') // or '/product'
