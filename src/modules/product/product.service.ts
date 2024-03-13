@@ -16,8 +16,8 @@ export class ProductService {
   // ): Promise<Product> {
   ): Promise<Response<any, Record<string, Product>>> {
     try {
-      const newStudent = await this.productModel.create(createProductDto);
-      const data = await newStudent.save();
+      const newProduct = await this.productModel.create(createProductDto);
+      const data = await newProduct.save();
       console.log("🚀 ~ data:", data)
       return res.status(201).json({ data });
     } catch (error) {
@@ -29,8 +29,9 @@ export class ProductService {
     return this.productModel.find().exec();
   }
 
-  findOne(id: number): string {
-    return `This action returns a #${id} product`;
+  async findOne(id: string): Promise<{} | Response<any, Record<string, Product>>>  {
+    const result = await this.productModel.findById(id);
+    return result;
   }
 
   update(id: number, updateProductDto: UpdateProductDto): string {
